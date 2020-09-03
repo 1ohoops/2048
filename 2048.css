@@ -1,0 +1,131 @@
+body {
+    background-color: #669999;
+}
+
+.result {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    border: none;
+    background-color: black;
+    opacity: 0.5;
+    text-align: center;
+    line-height: 50px;
+    color: rgb(253, 252, 252);
+    font-size: 20px;
+}
+
+.play {
+    display: none;
+}
+
+caption {
+    font-size: 20px;
+    margin: 5px;
+    color: blueviolet;
+}
+
+td {
+    height: 150px;
+    width: 150px;
+    border:solid 2px;
+    border-color: orange;
+    background-color: pink;
+    text-align: center;
+    font-size: 30px;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    border:5px solid #fff;
+}
+
+thead{
+    text-align: center;
+    border-radius: 10%;
+}
+
+body div{
+    padding: 30px;
+}
+
+.btn {
+    margin-top: 10px;
+    text-align: center;
+    padding: 0;
+    line-height: 30px;
+}
+
+.btm {
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+    font-size: 15px;
+    line-height: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px ;
+    outline: none;
+}
+
+.tips {
+    padding: 0;
+    margin: 0 auto;
+    width: 620px;
+    margin-top: 30px;
+}
+
+.tips::before,.tips::after{
+    content: "";
+    display: table;
+}
+
+.tips::after {
+    clear: both;
+}
+
+.lab {
+    float: left;
+    display: block;
+    padding: 0;
+}
+
+.tip {
+    display: block;
+    border: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding: 0;
+    margin-right: 2px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+.note {
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding: 0;
+    margin-right: 2px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+.scorealter {
+    float: right;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    padding: 0;
+}

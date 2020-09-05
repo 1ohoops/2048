@@ -1,3 +1,4 @@
+//移动后随机选择两个空白空格加上2
 function found(){
     var em=document.getElementsByTagName("td");
     var emp1=0;
@@ -33,6 +34,7 @@ function found(){
     }
 }
 
+//初始化游戏页面，随机选择两个空白空格加上2
 function init(){
     var em=16;
     var emp1=Math.floor(Math.random()*em);
@@ -60,6 +62,7 @@ function combind(way){
     }
 }
 
+//非空白空格的移动和合并方法
 function com(start,move,next){
     var em=document.getElementsByTagName("td");
     var i,j,s;
@@ -92,6 +95,7 @@ function com(start,move,next){
     }
 }
 
+//游戏胜利时的画面设置
 function victor(){
     var em=document.getElementsByTagName("td");
     for(var i=0;i<em.length;i++){
@@ -102,6 +106,7 @@ function victor(){
     return false;
 }
 
+//游戏失败时的画面设置
 function loss(){
     var em=document.getElementsByTagName("td");
     for(var i=0;i<em.length;i++){
@@ -112,6 +117,7 @@ function loss(){
     return true;
 }
 
+//调用移动方法和游戏判断方法
 function game(){
     var key="";
     var keyNum;
@@ -123,6 +129,7 @@ function game(){
         case 68:key="right";break;
         case 83:key="down";break;
     }
+    //判断是否是方向按键，是则调用移动和合并方法
     if(key!=""){
         combind(key);
         found();
@@ -134,6 +141,7 @@ function game(){
     result(v,l);
 }
 
+//判断游戏是否成功或者失败
 function result(v,l){
     var n=document.getElementById('result');
     if(v){
@@ -148,6 +156,7 @@ function result(v,l){
     }
 }
 
+//设置键盘的监听事件
 function listen(){
     document.onkeydown=function(){
         if(window.event){
@@ -160,10 +169,12 @@ function listen(){
     }
 }
 
+//结束时停止键盘的监听事件
 function cancle(){
     document.onkeydown=null;
 }
 
+//调用随机选择两个空格加上2，然后监听键盘上的按键信息
 function start(){
     score=0;
     init();
@@ -175,6 +186,7 @@ var score=0;
 
 window.onload=function(){
     var btm=document.getElementById('btm');
+    //重置按键
     btm.onclick=function(){
         location.reload();
     }
